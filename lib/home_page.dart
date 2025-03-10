@@ -10,14 +10,20 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          Center(child: Text("Hier soll das Wetter angezeigt werden")),
-          Center(
-              child:
-                  ElevatedButton(onPressed: () {}, child: Text("Show weather")))
-        ],
+    return MaterialApp(
+      home: Scaffold(
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Center(child: Text("Hier soll das Wetter angezeigt werden")),
+            SizedBox(
+              height: 20,
+            ),
+            Center(
+                child: ElevatedButton(
+                    onPressed: () {}, child: Text("Show weather")))
+          ],
+        ),
       ),
     );
   }
